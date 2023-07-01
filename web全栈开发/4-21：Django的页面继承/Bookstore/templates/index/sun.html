@@ -1,0 +1,27 @@
+{% extends 'index/father.html' %}
+<!--重写title-->
+{% block title %} 子页面 {% endblock %}
+
+<!--重新古诗标题-->
+{% block poetry_title %}
+送杜少府之任蜀州
+{% endblock poetry_title %}
+<!--重新古诗作者-->
+{% block poetry_author %}
+&nbsp;&nbsp;&nbsp;唐 王勃<br><br>
+{% endblock poetry_author %}
+<!--重写古诗内容-->
+{% block poetry_contant %}
+城阙辅三秦，风烟望五津。<br>
+与君离别意，同是宦游人。<br>
+海内存知己，天涯若比邻。<br>
+无为在歧路，儿女共沾巾。<br>
+{% endblock poetry_contant %}
+<!--重写翻译-->
+{% block poetry_translate %}
+译文：古代三秦之地，拱护长安城垣宫阙。风烟滚滚，望不到蜀州岷江的五津。<br>
+与你握手作别时，彼此间心心相印；你我都是远离故乡，出外做官之人。<br>
+四海之内只要有了你，知己啊知己，不管远隔在天涯海角，都像在一起。<br>
+请别在分手的岐路上，伤心地痛哭；像多情的少年男女，彼此泪落沾衣。<br>
+{% endblock poetry_translate %}
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/web全栈开发/4-13：Django应用创建和数据库搭建/database" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web全栈开发/4-21：Django的页面继承/Bookstore" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web全栈开发/4-24：Django的数据库应用/bookStore" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web全栈开发/4-26：Django数据表关联（一对一、一对多、多对多）/bookStore/bookStore" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web全栈开发/Django项目/music" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/web全栈开发/venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+</module>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}父页面{% endblock title %}</title>
+</head>
+<body>
+<p>五言律诗</p>
+<hr>
+
+<!--古诗标题-->
+{% block poetry_title %}
+春夜喜雨
+{% endblock poetry_title %}
+
+<!--古诗作者-->
+{% block poetry_author %}
+&nbsp;&nbsp;&nbsp;唐 杜甫<br><br>
+{% endblock poetry_author %}
+
+<!--古诗内容-->
+{% block poetry_contant %}
+好雨知时节，当春乃发生。<br>
+随风潜入夜，润物细无声。<br>
+野径云俱黑，江船火独明。<br>
+晓看红湿处，花重锦官城。<br>
+{% endblock poetry_contant %}
+<hr>
+<!--翻译-->
+{% block poetry_translate %}
+译文：及时的雨好像知道时节似的，在春天来到的时候就伴着春风在夜晚悄悄地下起来，无声地滋润着万物。<br>
+田野小径的天空一片昏黑，唯有江边渔船上的一点渔火放射出一线光芒，显得格外明亮。等天亮的时候，<br>
+那潮湿的泥土上必定布满了红色的花瓣，锦官城的大街小巷也一定是一片万紫千红的景象。<br>
+{% endblock poetry_translate %}
+</body>
+</html>

@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>WOFF test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="wofftest.css"/>
+    <script type="text/javascript" src="wofftest.js"></script>
+    
+    <style type="text/css">
+      @font-face {
+        font-family: WebFont;
+%FONTSOURCE%        
+      }    
+    </style>
+    <script type="text/javascript">
+      /* Generated based on features present in font */
+      var otf = Array(%OTFEATURES%);
+      var fctrial = %FCTRIAL%;
+      var symbolfont = %SYMBOLFONT%;
+      var colorfont = %COLORFONT%;
+      var initialdir = %INITIALDIR%;
+      var previewtext = [%PREVIEWTEXT%];
+      var axes = %AXES%;
+      var instances = %INSTANCES%;
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1>Web Font "%FONTNAME%"</h1>
+        <hr />
+      </div>
+      <div id="errors">
+        <fieldset>
+          <legend>Messages</legend>
+          <ul id="errorlist">
+            <li id="nojserror"><noscript><div style="display: inline">This test page requires JavaScript to be enabled.</div></noscript></li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="sides">
+        <div class="left-side">
+          <fieldset id="inputfieldset">
+            <legend>Input</legend>
+            <div id="toolbar">
+              Size: 
+              <select id="fontsize" onchange="UpdateFontSize(this);">
+                <option value="4">4 pt</option>
+                <option value="6">6 pt</option>
+                <option value="8">8 pt</option>
+                <option value="10">10 pt</option>
+                <option value="12">12 pt</option>
+                <option value="14">14 pt</option>
+                <option value="16">16 pt</option>
+                <option value="18">18 pt</option>
+                <option value="20">20 pt</option>
+                <option value="24">24 pt</option>
+                <option value="28">28 pt</option>
+                <option value="32" selected="selected">32 pt</option>
+                <option value="36">36 pt</option>
+                <option value="42">42 pt</option>
+                <option value="48">48 pt</option>
+                <option value="64">64 pt</option>
+                <option value="72">72 pt</option>
+                <option value="96">96 pt</option>
+              </select>
+              QuickPick: 
+              <select id="previewtext" onchange="UpdatePreviewQuickPick(this);">
+                <option value="0">Preview Text</option>
+                <option value="1">Alphabet + Numbers</option>
+                <option value="2">Lorum Ipsum</option>
+              </select>
+              BG: # 
+              <input id="color" type="text" maxlength="6" onkeyup="UpdateFontColorBG(this);" value="FFFFFF" />
+              FG: # 
+              <input id="color" type="text" maxlength="6" onkeyup="UpdateFontColorFG(this);" value="000000" />
+              Language: 
+              <input id="language" type="text" maxlength="6" onkeyup="UpdateLanguage(this);" value="en" />
+              Direction: 
+              <select id="direction" onchange="UpdateDirection(this);">
+                <option value="ltr" selected="selected">LTR</option>
+                <option value="rtl">RTL</option>
+              </select>
+            </div>
+            <textarea id="input" rows="20" cols="100" onkeyup="UpdatePreviewText(this);">Preview Text</textarea>
+          </fieldset>
+        </div>
+        <div class="right-side">
+          <fieldset id="otfeaturesfieldset">
+            <legend>OpenType Features</legend>
+              Alternate: 
+              <select id="alternate" onchange="UpdateAlternate(this);">
+                <option value="1" selected="selected">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            <div id="otfeatures"></div><hr/>
+            <h5>Note: Not all web browsers support all OpenType features and only features present in the font are shown.</h5>
+          </fieldset>
+          <fieldset id="axessliders"><!-- Will be generated with javascript --></fieldset>
+          <fieldset id="instances"><!-- Will be generated with javascript --></fieldset>
+        </div>
+      </div>
+      <div>
+      <fieldset id="outputfieldset">
+        <legend>Preview</legend>
+        <div id="preview" lang="en"></div>
+      </fieldset>
+      <fieldset id="multiple-instances-preview" class="has_visability_controller">
+        <legend><label><input type="checkbox" class="visibility_controller">Multiple Instances Editable Preview</label></legend>
+        <div class="visibility_content">
+          <button id="clear">Reset</button>
+          Select some text from the previews above/below, and click on an instance:
+          <span id="possible_instances"></span>
+          <div id="mi-preview" contenteditable>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet odio eu magna mattis vehicula. Duis egestas fermentum leo. Nunc eget dapibus eros, id egestas magna. Fusce non arcu non quam laoreet porttitor non non dui. Ut elit nisl, facilisis id hendrerit et, maximus at nunc. Fusce at consequat massa. Curabitur fermentum odio risus, vel egestas ligula rhoncus id. Nam pulvinar mollis consectetur. Aenean dictum ut tellus id fringilla. Maecenas rutrum ultrices leo, sed tincidunt massa tempus ac. Suspendisse potenti. Aenean eu tempus nisl.</div>
+          <small class="note"><strong>Note:</strong> This is a beta preview. When setting an instance inside an instance it will sometimes fails. When this happens, press the <i>Reset</i> button and try again.</small>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Troubleshooting</legend>
+        <ul>
+          <li><a href="http://forum.high-logic.com/viewtopic.php?f=4&amp;t=4309" target="_blank">Font not displaying?</a></li>
+          <li><a href="http://forum.high-logic.com/viewtopic.php?f=4&amp;t=4310" target="_blank">OpenType features not working?</a></li>
+          <li><a href="http://www.webfonts.com" target="_blank">Want to learn more about webfonts?</a></li>
+        </ul>          
+      </fieldset>
+      <fieldset>
+        <legend>About</legend>
+        Page generated on %DATE% by <a href="http://www.high-logic.com/font-editor/fontcreator.html" target="_blank">High-Logic FontCreator %VERMAJOR%.%VERMINOR%</a><br/>
+      </fieldset>
+    </div>
+    <script type="text/javascript">Initialize();</script>    
+  </body>
+</html>

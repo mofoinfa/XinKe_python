@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,td{
+            border: 1px solid #999;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        table thead tr{
+            background-color: #008c8c;
+            color: #fff;
+        }
+
+        table tbody tr:nth-child(odd){
+            background-color: #eee;
+        }
+
+        table tbody tr:hover{
+            background-color: #ccc;
+        }
+
+        table tbody tr td:first-child{
+            color: #f40;
+        }
+        button{
+            background-color:#f66f6a;
+            color:white;
+            width: 50px;
+            height: 20px;
+            border:0;
+            font-size: 16px;
+            box-sizing: content-box;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: #a54b4a;
+        }
+
+    </style>
+</head>
+<body>
+搜索： <input type="search" name="" id="" placeholder="请输入要的搜索商品">
+<br><br>
+<hr>
+<table>
+    <tr>
+        <td>id</td>
+        <td>书名</td>
+        <td>售价(元)</td>
+        <td>进价(元)</td>
+        <td>库存(万本)</td>
+        <td>功能</td>
+    </tr>
+    {% for book in books %}
+        <tr>
+            <td>{{book.id}}</td>
+            <td>{{book.name}}</td>
+            <td>{{book.sellingPrice}}</td>
+            <td>{{book.purchasingPrice}}</td>
+            <td>{{book.count}}</td>
+            <td><button>删除</button>&nbsp;&nbsp;<button>修改</button></td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
